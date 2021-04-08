@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 const Button = styled.button`
   background: transparent;
@@ -11,8 +12,9 @@ const Button = styled.button`
 `
 
 const Tr500 = styled.div`
-  text-red-500;
+  tw.text-red-500;
 `
+
 function Home() {
   return (
   <div>
@@ -22,7 +24,7 @@ function Home() {
     {/* styled-componentsの書き方 */}
     {/* twinmacro入れてないので、まだstyleは適用されない。*/}
     <Tr500>styled-hello!</Tr500>
-
+    <input type="text"/>
     <Button>I’m button</Button>
   </div>
   )
