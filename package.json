@@ -10,12 +10,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "fs": "*",
     "next": "10.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.2.3",
-    "tailwind.macro": "^1.0.0-alpha.10"
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
@@ -28,6 +26,7 @@
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "postcss": "^8.2.9",
     "style": "^0.0.3",
     "tailwindcss": "^2.1.1",
