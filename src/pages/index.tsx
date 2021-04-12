@@ -11,12 +11,6 @@ const Button = styled.button`
   padding: 0.25em 1em;
 `
 
-// const Tr500 = styled.div`
-//   tw.text-red-500;
-// `
-
-// const Tr500 = tw.div`text-red-500;`
-
 const Tr500 = styled.div`
 ${tw`text-red-500`}
 `
