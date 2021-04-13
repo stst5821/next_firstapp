@@ -12,6 +12,8 @@ module.exports = {
         // クライアントとサーバーで異なるクラス生成に起因するチェックサムの不一致を回避する。基本はtrueにしておく。
         // displayName = DOM内のコンポーネントを特定しやすくなる。falseにすると、検証ツールで見たとき、styled.divのような記述になり、コンポーネント名がわからないのでtrueのほうがいい。
         // displayNameの記述自体を省略しても有効になるので、falseのときだけ記述してもよい。
+        // preprocess: true はまもなく削除予定とのこと。issueに記載があった。
+        // https://github.com/styled-components/styled-components/issues/1559
          { ssr: true, "displayName": true }
         ]
       ]
