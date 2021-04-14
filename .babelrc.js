@@ -3,7 +3,8 @@ module.exports = {
     // 現在は、以前のトランスフォームである{"runtime": "classic"}がデフォルトのオプションになっている。
     // runtime:'automatic' = React17で追加された、新しいトランスフォームを有効にする。
     // 参考:https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
-    presets: [['next/babel', { 'preset-react': { runtime: 'automatic' } }]],
+    // そもそもNext.jsではreactをimportする必要がないので、runtime:'automatic'は不要。
+    presets: [['next/babel']],
     plugins: 
       ['babel-plugin-macros',
        [

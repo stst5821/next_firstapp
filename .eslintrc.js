@@ -6,9 +6,13 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  // ルール設定のプリセットを使用する。
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  // Typescriptのコードをlintできるようにする。
   parser: '@typescript-eslint/parser',
+  // 追加の設定オプション
   parserOptions: {
+    // jsxファイルの解析を有効にする。
     ecmaFeatures: {
       jsx: true,
     },
@@ -17,6 +21,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'import'],
   settings: {
+    // TypeScriptサポートをeslint-plugin-importに追加
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
