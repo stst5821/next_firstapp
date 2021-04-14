@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "storybook.test.js", "src/pages/sum.js", "src/pages/sum.test.js"  ],
   "exclude": [
     "node_modules"
   ]
