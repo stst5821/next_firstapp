@@ -1,15 +1,15 @@
 module.exports = {
   root: true,
   // 環境の指定。環境とは、あらかじめ定義されたグローバル変数のこと
-  env: { 
+  env: {
     browser: true,
     es2021: true,
     node: true,
   },
-  // ルール設定のプリセットを使用する。
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  // ルール設定のプリセットを使用する。prettierは他の設定を上書きする機会が得られるように一番うしろに配置。
+  extends: ["plugin:react/recommended", "plugin:prettier/recommended","prettier"],
   // Typescriptのコードをlintできるようにする。
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   // 追加の設定オプション
   parserOptions: {
     // jsxファイルの解析を有効にする。
@@ -17,51 +17,51 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: "module",
   },
-  plugins: ['react', '@typescript-eslint', 'import'],
+  plugins: ["react", "@typescript-eslint", "import"],
   settings: {
     // TypeScriptサポートをeslint-plugin-importに追加
-    'import/resolver': {
+    "import/resolver": {
       typescript: {
         alwaysTryTypes: true,
       },
     },
     react: {
-      version: 'latest',
+      version: "latest",
     },
   },
   rules: {
-    'import/extensions': [
-      'error',
-      'ignorePackages',
+    "import/extensions": [
+      "error",
+      "ignorePackages",
       {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
       },
     ],
-    'react/react-in-jsx-scope': [0],
-    'react/jsx-filename-extension': [
+    "react/react-in-jsx-scope": [0],
+    "react/jsx-filename-extension": [
       1,
       {
-        extensions: ['.tsx'],
+        extensions: [".tsx"],
       },
     ],
-    '@typescript-eslint/no-unused-vars': [
+    "@typescript-eslint/no-unused-vars": [
       2,
       {
-        argsIgnorePattern: '^_',
+        argsIgnorePattern: "^_",
       },
     ],
-    'no-console': [
+    "no-console": [
       1,
       {
-        allow: ['warn', 'error'],
+        allow: ["warn", "error"],
       },
     ],
-    'import/prefer-default-export': [0],
-    'react/prop-types': [0],
+    "import/prefer-default-export": [0],
+    "react/prop-types": [0],
   },
 };
