@@ -6,8 +6,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  // ルール設定のプリセットを使用する。prettierは他の設定を上書きする機会が得られるように一番うしろに配置。
-  extends: ["plugin:react/recommended", "plugin:prettier/recommended","prettier"],
+  extends: ['plugin:react/recommended', "plugin:prettier/recommended"],
   // Typescriptのコードをlintできるようにする。
   parser: "@typescript-eslint/parser",
   // 追加の設定オプション
@@ -63,5 +62,12 @@ module.exports = {
     ],
     "import/prefer-default-export": [0],
     "react/prop-types": [0],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
   },
 };
